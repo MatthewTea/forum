@@ -6,4 +6,16 @@ defmodule ForumWeb.PageController do
     # so skip the default app layout.
     render(conn, :home, layout: false)
   end
+
+  def users(conn, _params) do
+    IO.puts("User function hit!")
+    users = [
+      %{id: 1, name: "Matthew", color: "blue"},
+      %{id: 2, name: "Frax", color: "red"},
+      %{id: 3, name: "Butt", color: "pink"}
+    ]
+
+    # render(conn, :users, users: users, layout: false)
+    json(conn, %{users: users})
+  end
 end

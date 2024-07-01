@@ -1,0 +1,7 @@
+ <h1>This is users bros</h1>
+
+ <ul>
+ <%= for user <- @users do %>
+    <li><%=user.name %> - <%=user.color %></li>
+    <% end %>
+ </ul>
